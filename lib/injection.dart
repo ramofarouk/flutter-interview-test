@@ -1,3 +1,4 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_interview/core/repositories/repository_repository.dart';
 import 'package:flutter_interview/core/usecases/fetch_trending_repositories.dart';
 import 'package:flutter_interview/data/datasources/github_graphql_api.dart';
@@ -12,7 +13,7 @@ void setup() {
   // GraphQL Client
   final HttpLink httpLink = HttpLink('https://api.github.com/graphql');
   final AuthLink authLink =
-      AuthLink(getToken: () async => 'Bearer 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');
+      AuthLink(getToken: () async => 'Bearer ${dotenv.env['GITHUB_TOKEN']!}');
   final Link link = authLink.concat(httpLink);
 
   final GraphQLClient client = GraphQLClient(

@@ -6,9 +6,11 @@ import 'package:flutter_interview/presentation/bloc/repository_event.dart';
 import 'package:flutter_interview/themes/app_theme.dart';
 import 'package:flutter_interview/presentation/pages/home_screen.dart';
 import 'package:flutter_interview/injection.dart' as di;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+Future<void> main() async {
   di.setup();
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 

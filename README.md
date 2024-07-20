@@ -1,16 +1,26 @@
 # flutter_interview
 
-A new Flutter project.
+Welcome to the `flutter_interview` Flutter project!
+
+This project uses the BLoC pattern for state management.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Follow these steps to set up and run the project:
 
-A few resources to get you started if this is your first Flutter project:
+1. **Install Dependencies**
+   Install the necessary dependencies by running:
+   ```bash
+   flutter pub get
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2. **Configure Environment Variables**
+Create a .env file in the root directory of the project. This file is used to store environment-specific variables
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3. **Add GitHub Token**
+Obtain a GitHub access token and add it to your .env file. The expected format is:
+
+GITHUB_TOKEN=your_github_token_here
+
+4. **Run the Application**
+
+flutter run
